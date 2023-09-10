@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_week_day_item"
+    android:layout_width="70dp"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/oval_week_day_ripple"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:layout_marginEnd="5dp"
+    tools:ignore="UnusedAttribute">
+
+
+
+    <TextView
+        android:id="@+id/tv_day_of_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@drawable/text_color_selector_bold"
+        android:textStyle="bold"
+        tools:text="Wed"
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"/>
+
+    <ImageView
+        android:id="@+id/iv_check_icon"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:contentDescription="@string/week_day"
+        android:src="@drawable/day_week_icon_selector"
+        app:tint="@drawable/text_secondary_color_selector"
+        tools:tint="@color/item_primary_color" />
+
+
+
+</LinearLayout>

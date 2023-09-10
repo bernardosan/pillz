@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Pillz" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/item_secondary_color</item>
+        <item name="colorSecondaryVariant">@color/item_secondary_color</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <!-- Customize your theme here. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+    </style>
+
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/bg_spinner</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/item_secondary_color</item>
+    </style>
+</resources>

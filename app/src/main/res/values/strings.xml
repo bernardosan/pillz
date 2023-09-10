@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">pillz</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="week_day">Week Day</string>
+    <string-array name="Periodicity_array">
+        <item>Every 24 hours</item>
+        <item>Every 16 hours</item>
+        <item>Every 12 hours</item>
+        <item>Every 10 hours</item>
+        <item>Every 8 hours</item>
+        <item>Every 6 hours</item>
+        <item>Every 4 hours</item>
+        <item>Every 2 hours</item>
+    </string-array>
+
+</resources>

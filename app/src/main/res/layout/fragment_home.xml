@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.HomeFragment">
+
+
+
+
+
+    <ImageView
+        android:id="@+id/iv_user"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_user_place_holder"
+        app:layout_constraintTop_toTopOf="@id/tv_title"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:clickable="true"
+        android:focusable="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:text="Hi,"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_user"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:text="User"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_title"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ll_date_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="10dp"
+        android:paddingVertical="10dp"
+        android:background="@drawable/oval_shape_ripple"
+        android:orientation="horizontal"
+        android:gravity=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <TextView
+            android:id="@+id/tv_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="----"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            tools:text="June" />
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="----"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toEndOf="@id/tv_month"
+            tools:text="2023"/>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_select_date"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+            app:layout_constraintBottom_toBottomOf="@id/tv_year"
+            app:layout_constraintStart_toEndOf="@id/tv_year"
+            app:layout_constraintTop_toTopOf="@id/tv_year"
+            android:contentDescription="" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_notifications"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_baseline_notifications_24"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ll_date_select"
+        app:layout_constraintBottom_toBottomOf="@id/ll_date_select"
+        app:tint="@color/black" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_date_select"
+        tools:listitem="@layout/item_calendar_day" />
+
+    <TextView
+        android:id="@+id/tv_to_take"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:text="To take"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/rv_calendar"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_to_take_left"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/button_ripple_left"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintTop_toTopOf="@id/tv_to_take"
+        app:layout_constraintBottom_toBottomOf="@id/tv_to_take"
+        app:layout_constraintEnd_toStartOf="@id/iv_to_take_right"
+        android:contentDescription=""
+        android:clickable="true"
+        android:focusable="true"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_to_take_right"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/button_ripple_right"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="@id/tv_to_take"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_to_take"
+        android:contentDescription=""
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_pills"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="20dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_to_take"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_pill" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_pill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/item_secondary_color"
+        app:fabCustomSize="60dp"
+        android:tint="@color/white"
+        app:tint="@color/white"
+        app:rippleColor="@color/white"
+        app:borderWidth="0dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        android:clickable="true"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
